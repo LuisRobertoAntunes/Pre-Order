@@ -1,0 +1,131 @@
+*{
+    box-sizing: border-box;
+}
+body{
+background: linear-gradient(112deg, rgba(251,131,165,1) 0%, rgba(103,144,237,1) 100%);
+ height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background-attachment: fixed;
+ font-family: sans-serif;
+ overflow: hidden;
+}
+.container{
+    width: 80%;
+    height: 80%;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    background: inherit;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.container:before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+    filter: blur(10px);
+    margin: -20px;
+  }
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 30px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+ul{
+  list-style: none;
+  display: flex;
+  color: white;
+}
+li{
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+}
+li.active{
+    background: #B83429;
+    padding: 3px 15px;
+    border-radius: 10px;
+}
+.content{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    position: relative;
+}
+.content img{
+    position: absolute;
+    width: 70%;
+    top: 60%;
+    left: 55%;
+    transform: translate( -50%, -50%);
+    animation: move 2s infinite alternate ease-in-out;
+    
+}
+.social-media{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    width: fit-content;
+    height: 100%;
+}
+.social-media svg{
+    margin: 20px 15px;
+    cursor: pointer;
+
+}
+
+.content-left{
+    color: white;
+    width: 100%;
+   padding: 0 50px;
+   margin-top: -180px;
+}
+.content-right{
+    color: white;
+    width: 100%;
+   padding: 0 20px;
+   text-align: right;
+   margin-top: 200px;
+}
+h1,h3{
+    margin: 0;
+}
+h1{
+    font-size: 46px;
+}
+.pre-order{
+    background: #B83429;
+    margin-left: auto;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    border-radius:  8px 0 0 0;
+    cursor: pointer;
+}
+.pre-order svg{
+    margin-right: 15px;
+}
+@keyframes move {
+    from { 
+        
+        transform: translate( -50%, -55%);
+    } 
+}
